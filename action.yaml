@@ -223,11 +223,6 @@ runs:
         # Prepare for end-to-end tests                                      #
         #####################################################################
 
-        -   uses: browser-actions/setup-chrome@latest
-            if: inputs.e2e_js == 'yes'
-            with:
-                chrome-version: "${{ inputs.chrome_version }}"
-
         -   name: Run Chrome Headless
             if: inputs.e2e_js == 'yes'
             run: |
